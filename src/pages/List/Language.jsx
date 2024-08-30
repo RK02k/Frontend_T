@@ -36,7 +36,7 @@
 //     const editedInfo = { language };
 //     try {
 //       await axios.patch(
-//         `https://twibb.vercel.app/userUpdates/${user?.email}`,
+//         `https://twibbleback.onrender.com/userUpdates/${user?.email}`,
 //         editedInfo
 //       );
 //     } catch (error) {
@@ -47,7 +47,7 @@
 //   const sendOtp = async () => {
 //     try {
 //       const response = await axios.post(
-//         "https://twibb.vercel.app/api/otp/sendotp",
+//         "https://twibbleback.onrender.com/api/otp/sendotp",
 //         { email: user.email }
 //       );
 //       if (response.data.success) {
@@ -63,7 +63,7 @@
 //   const verifyOtp = async () => {
 //     try {
 //       const response = await axios.post(
-//         "https://twibb.vercel.app/otp/verifyOtp",
+//         "https://twibbleback.onrender.com/otp/verifyOtp",
 //         { email: user.email, otp }
 //       );
 //       if (response.data.valid) {
@@ -134,8 +134,6 @@
 
 // export default Language;
 
-
-
 import { useTranslation } from "react-i18next";
 import { useEffect, useState } from "react";
 import axios from "axios";
@@ -173,7 +171,7 @@ const Language = () => {
     const editedInfo = { language };
     try {
       await axios.patch(
-        `https://twibb.vercel.app/userUpdates/${user?.email}`,
+        `https://twibbleback.onrender.com/userUpdates/${user?.email}`,
         editedInfo
       );
     } catch (error) {
@@ -198,7 +196,10 @@ const Language = () => {
       </div>
 
       <div className="action">
-        <button className="action-button" onClick={() => changeLanguage(selectedLang)}>
+        <button
+          className="action-button"
+          onClick={() => changeLanguage(selectedLang)}
+        >
           {t("Lani4")}
         </button>
       </div>
@@ -207,4 +208,3 @@ const Language = () => {
 };
 
 export default Language;
-

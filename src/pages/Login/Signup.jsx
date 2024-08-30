@@ -34,7 +34,7 @@ function Signup() {
           plan: "free",
           language: "english", // Adding the plan property here
         };
-        axios.post("https://twibb.vercel.app/register", user);
+        axios.post("https://twibbleback.onrender.com/register", user);
       })
       .catch((err) => {
         console.log(err);

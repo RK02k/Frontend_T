@@ -36,7 +36,7 @@ function Login() {
     try {
       const payload = { email, otp };
       const response = await axios.post(
-        "https://twibb.vercel.app/api/otp/verifyOtp",
+        "https://twibbleback.onrender.com/api/otp/verifyOtp",
         payload
       );
       if (response.data.valid) {
@@ -68,7 +68,7 @@ function Login() {
       };
 
       const response = await axios.post(
-        "https://twibb.vercel.app/api/login",
+        "https://twibbleback.onrender.com/api/login",
         loginInfo
       );
 

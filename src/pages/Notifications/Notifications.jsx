@@ -12,7 +12,7 @@ const Notifications = () => {
     const fetchNotifications = async () => {
       try {
         const response = await axios.get(
-          "https://twibb.vercel.app/notifications"
+          "https://twibbleback.onrender.com/notifications"
         );
         setNotifications(response.data);
       } catch (error) {

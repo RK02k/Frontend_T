@@ -16,7 +16,7 @@ const Plan = () => {
   const checkout = async (plan) => {
     try {
       const response = await axios.post(
-        "https://twibb.vercel.app/createStripeSession",
+        "https://twibbleback.onrender.com/createStripeSession",
         {
           plan,
           customerId: user?.email,

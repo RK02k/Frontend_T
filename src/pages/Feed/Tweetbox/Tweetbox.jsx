@@ -42,7 +42,7 @@
 //         e.preventDefault();
 //          console.log(user.providerData[0].providerId)
 //         if(user.providerData[0].providerId === 'password'){
-//             fetch(`https://twibb.vercel.app/loggedInUser?email=${email}`).then(res => res.json()).then(data => {
+//             fetch(`https://twibbleback.onrender.com/loggedInUser?email=${email}`).then(res => res.json()).then(data => {
 //                 setName(data[0]?.name)
 //                 setUsername(data[0]?.username)
 //             })
@@ -66,7 +66,7 @@
 //             // console.log(userPost)
 //             setPost('')
 //             setImageURL('')
-//             fetch(`https://twibb.vercel.app/post`,{
+//             fetch(`https://twibbleback.onrender.com/post`,{
 //                 method:"POST",
 //                 headers :{
 //                     'content-type':'application/json'
@@ -151,7 +151,7 @@ const Tweetbox = () => {
   const handleTweet = (e) => {
     e.preventDefault();
     if (user.providerData[0].providerId === "password") {
-      fetch(`https://twibb.vercel.app/loggedInUser?email=${email}`)
+      fetch(`https://twibbleback.onrender.com/loggedInUser?email=${email}`)
         .then((res) => res.json())
         .then((data) => {
           setName(data[0]?.name);
@@ -172,7 +172,7 @@ const Tweetbox = () => {
       };
       setPost("");
       setImageURL("");
-      fetch(`https://twibb.vercel.app/post`, {
+      fetch(`https://twibbleback.onrender.com/post`, {
         method: "POST",
         headers: {
           "content-type": "application/json",

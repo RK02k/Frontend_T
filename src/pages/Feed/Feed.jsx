@@ -8,7 +8,7 @@ function Feed() {
   const { t } = useTranslation();
   const [posts, setPosts] = useState([]);
   useEffect(() => {
-    fetch("https://twibb.vercel.app/post")
+    fetch("https://twibbleback.onrender.com/post")
       .then((res) => res.json())
       .then(
         (data) => {

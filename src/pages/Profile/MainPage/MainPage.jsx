@@ -22,7 +22,7 @@ const MainPage = ({ user }) => {
   console.log(loggedInUser);
 
   useEffect(() => {
-    fetch(`https://twibb.vercel.app/userPost?email=${user?.email}`)
+    fetch(`https://twibbleback.onrender.com/userPost?email=${user?.email}`)
       .then((res) => res.json())
       .then((data) => {
         setPosts(data);
@@ -45,7 +45,7 @@ const MainPage = ({ user }) => {
         setIsLoading(false);
         if (url) {
           axios.patch(
-            `https://twibb.vercel.app/userUpdates/${user?.email}`,
+            `https://twibbleback.onrender.com/userUpdates/${user?.email}`,
             userCoverImage
           );
         }
@@ -68,7 +68,7 @@ const MainPage = ({ user }) => {
         setIsLoading(false);
         if (url) {
           axios.patch(
-            `https://twibb.vercel.app/userUpdates/${user?.email}`,
+            `https://twibbleback.onrender.com/userUpdates/${user?.email}`,
             userProfileImage
           );
         }

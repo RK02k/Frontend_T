@@ -86,7 +86,7 @@ export default function EditProfile({ user, LoggedInUser }) {
     };
     if (editedInfo) {
       await axios.patch(
-        `https://twibb.vercel.app/userUpdates/${user?.email}`,
+        `https://twibbleback.onrender.com/userUpdates/${user?.email}`,
         editedInfo
       );
       setOpen(false);
